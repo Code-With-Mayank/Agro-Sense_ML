@@ -1,0 +1,92 @@
+{% extends 'layout.html' %} 
+{% block body %}
+
+<style>
+    /* Custom Styles */
+    body {
+        background-color: #091208; /* dark background */
+        font-family: 'Arial', sans-serif; /* Set font family */
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Container */
+    .container {
+        margin-top: 10px; /* Adjust margin from top */
+        margin-bottom: 50px; /* Adjust margin from bottom*/
+        width: 100%; /* Set container width */
+        padding: 0 20px; /* Add padding to the left and right */
+        box-sizing: border-box; /* Include padding and border in the total width */
+    }
+
+    /* Card */
+    .card {
+        border-radius: 20px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+        background-color: #FFFF00; /* Set card background color */
+        opacity: 0.8;
+        width: 100%; /* Set card width */
+        max-width: 800px; /* Max width for larger screens */
+        overflow: hidden; /* Hide overflow content */
+        transition: box-shadow 0.3s ease; /* Smooth transition */
+        margin: auto; /* Center the card */
+    }
+
+    .card:hover {
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2); /* Darker box shadow on hover */
+    }
+
+    /* Card Body */
+    .card-body {
+        padding: 40px; /* Increase padding for better appearance */
+        text-align: center; /* Center align text */
+    }
+
+    /* Text */
+    .text-black {
+        color: #333; /* Dark text color */
+        font-size: 18px; /* Increase font size */
+        font-weight: bold; /* Make text bold */
+        font-family: 'Roboto', sans-serif; /* Set custom font */
+        line-height: 1.5; /* Increase line height for better readability */
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .fade-in {
+        animation: fadeIn 1s ease; /* Fade in animation */
+    }
+
+    /* Image */
+    .rounded-image {
+        width: 80%; /* Set image width */
+        border-radius: 20px; /* Add border radius */
+        margin: auto; /* Center the image */
+        display: block; /* Make image a block element for margin auto to work */
+    }
+</style>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-10 col-lg-8">
+            <div class="card fade-in">
+                <div class="card-body">
+                    <!-- Render the image -->
+                    <img src="data:image/jpeg;base64,{{ img }}" class="rounded-image" /> 
+                    <p class="text-black" style="margin-top: 20px;">{{ prediction }}</p>
+                    <div style="margin-bottom: 20px;"></div> <!-- Add spacing after paragraph -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

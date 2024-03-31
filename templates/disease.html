@@ -1,0 +1,103 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<style>
+    /* Custom Styles */
+    body {
+        background-color: #091208; /* Dark background */
+        font-family: Arial, sans-serif; /* Set font family */
+        margin: 0;
+        padding: 0;
+    }
+
+    h3 {
+      margin: 0;
+      color: rgb(219, 5, 30);
+      font-size: 2em;
+      line-height: 1;
+      text-align: center;
+      margin-top: 10px;
+      padding: 60px;
+    }
+
+    /* Form container */
+    .form-container {
+        width: 350px;
+        margin: 0 auto;
+        background-color: #ffffff; /* White background */
+        border-radius: 25px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    }
+
+    /* File input */
+    input[type='file'] {
+        display: none; /* Hide default file input */
+    }
+
+    .file-input-label {
+        display: block;
+        padding: 10px;
+        background-color: #004d00; /* Deep green button color */
+        color: #fff; /* White text color */
+        text-align: center;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .file-input-label:hover {
+        background-color: #003300; /* Darker green on hover */
+    }
+
+    /* Image preview */
+    #output-image {
+        display: block;
+        margin: 20px auto;
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    }
+
+    /* Button */
+    .btn-primary {
+        background-color: #004d00; /* Deep green button color */
+        color: #fff; /* White text color */
+        font-weight: bold;
+        width: 100%;
+        height: 50px;
+        border-radius: 12px;
+        font-size: 18px;
+        transition: background-color 0.3s ease; /* Smooth transition */
+    }
+
+    .btn-primary:hover {
+        background-color: #003300; /* Darker green on hover */
+    }
+</style>
+
+<!-- Form Section -->
+<h3><b>Find out which disease has been caught by your plant 🎍💉</b></h3>
+<div class="form-container">
+    <form class="form-signin" method="post" enctype="multipart/form-data">
+        <h2 class="h4 mb-3 font-weight-normal"><b>Please Upload The Image</b></h2>
+        <label for="inputfile" class="file-input-label">Choose File</label>
+        <input type="file" name="file" id="inputfile" onchange="preview_image(event)" accept="image/*">
+        <img id="output-image" class="rounded mx-auto d-block" />
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Predict</button>
+    </form>
+</div>
+
+<script type="text/javascript">
+    function preview_image(event) {
+        var reader = new FileReader();
+        reader.onload = function () {
+            var output = document.getElementById('output-image');
+            output.src = reader.result;
+        }
+        reader.readAsDataURL(event.target.files[0]);
+    }
+</script>
+
+{% endblock %}

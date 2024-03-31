@@ -1,0 +1,49 @@
+{% extends 'layout.html' %} 
+{% block body %}
+
+<style>
+  /* Custom styles */
+  .mt-0 {
+    margin-top: 50px !important;
+  }
+  .card {
+    background-color: #FFFF00	;
+    opacity: 0.8;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  }
+  .card-body {
+    padding: 20px;
+  }
+  .img-fluid {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+  }
+  .text-center {
+    color: #343a40;
+  }
+</style>
+
+<div class="container-fluid">
+  <div class="row justify-content-center align-items-center mt-5">
+    <div class="col-sm-10 col-md-8 col-lg-6">
+      <div class="card">
+        <div class="card-body text-center">
+          <h1><b>You should grow <b><h3>{{ prediction }}</h3></b> in your Farm.</b></h1>
+          <p class="mt-4">☝🏿Above prediction is made by the ML model as per the given data of soil and weather conditions.☝🏿</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-10 col-md-8 col-lg-6 mt-4 mt-lg-0">
+      <lottie-player src="https://lottie.host/cc500f9e-1822-4145-bfc0-9e7f1f67785f/VfBrUIPT1B.json" background="##020c02" speed="1" style="width: 450px; height: 500px" loop autoplay direction="1" mode="normal"></lottie-player>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

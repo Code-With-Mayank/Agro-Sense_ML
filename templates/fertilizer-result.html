@@ -1,0 +1,101 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<style>
+    /* Custom Styles */
+    body {
+        background-color: #091208; /* Dark background */
+        font-family: Arial, sans-serif; /* Set font family */
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Container */
+    .container {
+        margin-top: 5px; /* Adjust margin from top */
+        margin-bottom: 5px; /* Adjust margin from bottom*/
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Card */
+    .card {
+        border-radius: 20px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+        background-color: #FFFF00; /* Yellow background */
+        opacity: 0.8;
+        width: 100%; /* Set card width */
+        max-width: 600px; /* Max width for larger screens */
+        overflow: hidden; /* Hide overflow content */
+        transition: box-shadow 0.3s ease; /* Smooth transition */
+    }
+
+    .card:hover {
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2); /* Darker box shadow on hover */
+    }
+
+    /* Card Body */
+    .card-body {
+        padding: 20px;
+    }
+
+    /* Text */
+    .text-center {
+        text-align: center;
+    }
+
+    .text-black {
+        color: #333; /* Dark text color */
+        font-size: 18px; /* Increase font size */
+        font-weight: bold; /* Make text bold */
+        font-family: 'Roboto', sans-serif; /* Set custom font */
+        line-height: 1.5; /* Increase line height for better readability */
+    }
+
+    /* Animation */
+    .lottie-animation {
+        width: 200px; /* Adjust animation width */
+        height: 450px; /* Adjust animation height */
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .fade-in {
+        animation: fadeIn 1s ease; /* Fade in animation */
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+        }
+        .lottie-animation {
+            width: 150px; /* Adjust animation width for smaller screens */
+            height: 300px; /* Adjust animation height for smaller screens */
+        }
+    }
+</style>
+
+<div class="container">
+    <lottie-player class="lottie-animation" src="https://lottie.host/abca729e-9f7e-4513-bffb-ad31ccfade98/Q2oQGhjfBs.json" background="#091208" speed="1" loop autoplay direction="1" mode="normal"></lottie-player>
+    <div class="col-sm-10 col-md-8 col-lg-6">
+        <div class="card fade-in">
+            <div class="card-body">
+                <p class="text-center text-black" style="margin-top: 20px;">{{ recommendation }}</p>
+                <div style="margin-bottom: 20px;"></div> <!-- Add spacing after paragraph -->
+            </div>
+        </div>
+    </div>
+    <lottie-player class="lottie-animation" src="https://lottie.host/abca729e-9f7e-4513-bffb-ad31ccfade98/Q2oQGhjfBs.json" background="#091208" speed="1" loop autoplay direction="1" mode="normal"></lottie-player>
+</div>
+
+{% endblock %}
