@@ -22,7 +22,7 @@ For the fertilizer recommendation application, the user can input the soil data 
 
 For the last application, that is the plant disease prediction application, the user can input an image of a diseased plant leaf, and the application will predict what disease it is and will also give a little background about the disease and suggestions to cure it.
 
-<h2>How to use 💻 </h2>
+<h2>How to use 🤔 </h2>
 <h3>Crop Recommendation system ==> </h3> Enter the corresponding nutrient values of your soil, state and city. Note that, the N-P-K (Nitrogen-Phosphorous-Pottasium) values to be entered should be the ratio between them. Refer this website for more information. Note: When you enter the city name, make sure to enter mostly common city names. Remote cities/towns may not be available in the Weather API from where humidity, temperature data is fetched.<br>
 
 <br><h3>Fertilizer suggestion system ==> </h3> Enter the nutrient contents of your soil and the crop you want to grow. The algorithm will tell which nutrient the soil has excess of or lacks. Accordingly, it will give suggestions for buying fertilizers.<br>
@@ -31,3 +31,10 @@ For the last application, that is the plant disease prediction application, the 
 
 <h2>DISCLAIMER ⚠️</h2>
 This is a POC(Proof of concept) kind-of project. The data used here comes up with no guarantee from the creator. So, don't use it for making farming decisions. If you do so, the creator is not responsible for anything. However, this project presents the idea that how we can use ML/DL into precision farming if developed at large scale and with authentic and verified data
+
+<h2> Live Website 💻 </h2>
+<h4><b>Link : </b></h4> https://agro-sense-ml-cza4.onrender.com/
+
+<h2> Full Explanation of Project 🚀 </h2>
+<h4><b>Link : </b></h4> https://www.linkedin.com/posts/mayank-jha-9132b8214_agtech-aiinag-smartfarming-activity-7184906045213847552-zRoJ?utm_source=share&utm_medium=member_desktop
+
