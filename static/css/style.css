@@ -120,14 +120,17 @@ header {
 nav { 
 	margin:0;
 	padding: 0;
-	color: rgb(3, 56, 28)
+	color: rgb(3, 56, 28);
+	-webkit-backdrop-filter: blur(8px);
+	backdrop-filter: blur(8px);
 	/* position: relative; */
 }
 
 
+
 #logo a {
 	float: left;
-    font-size: .8em;
+    font-size: .9em;
     display: initial;
     margin: 0;
     letter-spacing: 1px;
